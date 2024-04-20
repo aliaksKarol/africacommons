@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        footer: "#3c3b33",
+        subscribeBtn: "#b69c86",
+      },
       maxWidth: {
         "1140": "1140px",
       },
@@ -17,6 +21,9 @@ const config: Config = {
         "md-max": { max: "767px" },
         "lg-max": { max: "991px" },
         "xl-max": { max: "1139px" },
+      },
+      spacing: {
+        "12": "3rem",
       },
     },
   },
