@@ -16,7 +16,7 @@ export function LinkBlock() {
         <Link
           key={link.name}
           href={link.href}
-          className='block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4'
+          className='block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-gray-800 mr-4'
         >
           {link.name}
         </Link>

@@ -85,7 +85,7 @@ function Footer() {
               </form>
             </div>
           </div>
-          <div className=''>
+          <div>
             <div
               id='google_translate_element'
               style={{ display: "inline-block" }}

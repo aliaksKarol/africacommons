@@ -17,7 +17,7 @@ export function Button({ href, children }: ButtonProps) {
         py-2
         mr-2
         text-sm
-        bg-gray-700
+        bg-gray-500
         text-white
         rounded-md
       '

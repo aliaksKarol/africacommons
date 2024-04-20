@@ -25,10 +25,10 @@ export default function Header() {
   }, []);
 
   return (
-    <header className='p-5 text-white mx-auto lg:max-w-1140'>
+    <header className='pt-0 p-5 text-gray-500 mx-auto lg:max-w-1140'>
       <div className='max-w-7xl mx-auto'>
-        <nav className='flex flex-col lg:flex-row bg-teal-500 p-6'>
-          <div className='flex items-center justify-between text-white mr-6 lg:justify-between'>
+        <nav className='flex flex-col lg:flex-row p-6'>
+          <div className='flex items-center justify-between text-gray-500 mr-6 lg:justify-between'>
             <Link href='/'>
               <img
                 src='https://static.coherentcommons.com/africacommons.net/img/logos/logo.svg'

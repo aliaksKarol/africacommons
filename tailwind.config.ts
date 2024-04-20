@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         footer: "#3c3b33",
         subscribeBtn: "#b69c86",
+        customGray: "#212529",
       },
       maxWidth: {
         "1140": "1140px",

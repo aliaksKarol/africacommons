@@ -16,7 +16,7 @@ const userNavigation = [
 
 export function UserBlock() {
   return (
-    <div className='relative inline-flex lg:items-center mt-4 lg:mt-0 md-max:justify-center'>
+    <div className='relative inline-flex justify-end lg:items-center mt-4 lg:mt-0 md-max:justify-center'>
       <Button href={"#"}>Upload</Button>
       <Menu as='div' className='inline-flex lg:items-center text-left'>
         {({ open }) => (
@@ -24,11 +24,11 @@ export function UserBlock() {
             <Menu.Button className='inline-flex justify-center lg:items-center gap-1 w-full text-sm font-medium leading-5 whitespace-nowrap transition duration-150 ease-in-out hover:underline'>
               <div className='flex items-center'>
                 <img
-                  className='h-10 w-10 rounded-full mr-2'
+                  className='h-7 w-7 rounded-full mr-2 ml-4'
                   src='https://secure.gravatar.com/avatar/a4e850d8548fffc0f2a88f9c804be9b9?s=100&amp;r=g&amp;d=https://static.coherentcommons.com/img/placeholders/user.png'
                   alt=''
                 />
-                <ArrowDownIcon />
+                <ArrowDownIcon isOpen={open} />
               </div>
             </Menu.Button>
             <Transition
@@ -44,7 +44,7 @@ export function UserBlock() {
                 <Menu.Items
                   static
                   ref={ref}
-                  className='origin-top-right absolute right-0 mt-1 w-40 rounded border border-gray-300 py-2 bg-white shadow-xs outline-none'
+                  className='origin-top-right absolute right-0 mt-10 lg:mt-1 w-40 rounded border border-gray-300 py-2 bg-white shadow-xs outline-none'
                 >
                   <div className='block px-4 py-2 text-xs leading-5 text-gray-700'>
                     Signed in as <b>aleks</b>
