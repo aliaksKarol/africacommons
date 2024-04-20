@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --base-color:#212529;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,17 +18,170 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--base-color);
+    text-align: left;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+footer h5,
+footer .copyright,
+footer .copyright a {
+  color: #d6d3d1;
+  font-size: 0.8rem;
+}
+
+footer a,
+#signup_ribbon a {
+  color: #efefef;
+  font-size: 0.9rem;
+}
+
+footer a:hover,
+#signup_ribbon a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.easy-field::placeholder {
+  color: #cbcbcb;
+}
+
+.search-box {
+  border-radius: 2rem !important;
+  height: 2.1rem !important;
+  padding-left: 1rem !important;
+  padding-top: 0.2rem !important;
+}
+
+.search-box::placeholder {
+  color: #cbcbcb;
+}
+
+.primary-color {
+  color: #ffc300;
+}
+
+.primary-background {
+  background-color: #ffc300;
+}
+
+.facet-title-header {
+    display: inline-block;
+    text-overflow: ellipsis;
+}
+
+
+/* Forms */
+
+.form-signin {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group > input,
+.form-label-group > label {
+  height: 3.125rem;
+  padding: 0.75rem;
+}
+
+.form-label-group > select {
+  height: 3.125rem;
+  padding: 0.75rem 0.5rem;
+}
+
+.form-label-group > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0; /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  pointer-events: none;
+  cursor: text; /* Match the input under the label */
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: 1.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 12px;
+  color: #777;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #777;
+}
+
+.toast {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #fff;
+}
+
+.toast a {
+  color: #0a66c2;
+}
+
+
+footer h2 {
+  font-size: 1rem;
+  color: rgb(214, 211, 209);
+  font-weight: normal;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #6b7280 !important;
+  opacity: 1;
+}
+
+input::placeholder,textarea::placeholder {
+  color: #6b7280 !important;
+  opacity: 1;
 }

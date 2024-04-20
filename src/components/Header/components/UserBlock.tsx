@@ -6,19 +6,17 @@ import CN from "@/utils/classNames";
 import { Menu, Transition } from "@headlessui/react";
 
 const userNavigation = [
-  { name: "Signed in as aleks", href: "/accounts/email/" },
   { name: "Uploads", href: "/accounts/uploads/" },
   { name: "Following", href: "/accounts/following/" },
   { name: "Affiliation", href: "/accounts/affiliate/" },
   { name: "Lists", href: "/account/lists/" },
   { name: "Settings", href: "/accounts/email/" },
   { name: "Help", href: "https://coherentdigital.net/contact-us" },
-  { name: "Logout", href: "/accounts/logout/" },
 ];
 
 export function UserBlock() {
   return (
-    <div className='flex lg:items-center mt-4 lg:mt-0 md-max:justify-center'>
+    <div className='relative inline-flex lg:items-center mt-4 lg:mt-0 md-max:justify-center'>
       <Button href={"#"}>Upload</Button>
       <Menu as='div' className='inline-flex lg:items-center text-left'>
         {({ open }) => (
@@ -33,7 +31,6 @@ export function UserBlock() {
                 <ArrowDownIcon />
               </div>
             </Menu.Button>
-
             <Transition
               show={open}
               enter='transition ease-out duration-100 transform'
@@ -47,24 +44,35 @@ export function UserBlock() {
                 <Menu.Items
                   static
                   ref={ref}
-                  className='origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg outline-none'
+                  className='origin-top-right absolute right-0 mt-1 w-40 rounded border border-gray-300 py-2 bg-white shadow-xs outline-none'
                 >
-                  <div className='rounded-md bg-white shadow-xs'>
-                    {userNavigation.map((item) => (
+                  <div className='block px-4 py-2 text-xs leading-5 text-gray-700'>
+                    Signed in as <b>aleks</b>
+                  </div>
+                  <div className='h-0 my-2 border-t border-gray-300 overflow-hidden'></div>
+                  {userNavigation.map((item, idx) => (
+                    <>
                       <Menu.Item key={item.name}>
                         {({ active }) => (
                           <a
                             href={item.href}
                             className={CN(
                               active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm leading-5 text-gray-700"
+                              "block px-4 py-2 text-xs leading-5 text-gray-700"
                             )}
                           >
                             {item.name}
                           </a>
                         )}
                       </Menu.Item>
-                    ))}
+                      {(idx + 2) % 5 === 0 && (
+                        <div className='h-0 my-2 border-t border-gray-300 overflow-hidden'></div>
+                      )}
+                    </>
+                  ))}
+                  <div className='h-0 my-2 border-t border-gray-300 overflow-hidden'></div>
+                  <div className='block px-4 py-2 text-xs leading-5 text-gray-700'>
+                    Logout
                   </div>
                 </Menu.Items>
               )}
