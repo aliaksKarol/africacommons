@@ -31,7 +31,7 @@ export const SelectField: FC<SelectProps> = ({
       <div>
         <button
           type='button'
-          className='inline-flex justify-center items-center gap-1 w-full rounded-sm border border-gray-600 shadow-sm px-4 py-1 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline focus:outline-gray-400 focus:border-gray-100 focus:bg-gray-500 focus:text-white focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500'
+          className='inline-flex justify-center items-center gap-1 w-full rounded-sm border border-gray-600 shadow-sm px-4 py-1 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline focus:outline-gray-400 focus:border-gray-100 focus:bg-gray-500 focus:text-white focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500'
           onClick={() => setIsOpen(!isOpen)}
           aria-haspopup='true'
           aria-expanded='true'

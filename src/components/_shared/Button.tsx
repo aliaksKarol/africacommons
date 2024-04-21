@@ -6,21 +6,16 @@ type ButtonProps = {
   customClass?: string;
 };
 
-export function Button({ href, children }: ButtonProps) {
+export function Button({ href, children, customClass }: ButtonProps) {
   return (
     <div>
       <Link
         href={href}
-        className='
-        inline-block
-        px-4
-        py-2
-        mr-2
-        text-sm
-        bg-gray-500
-        text-white
-        rounded-md
-      '
+        className={
+          customClass
+            ? customClass
+            : "inline-block px-4 py-2 mr-2 text-sm bg-gray-700 text-white rounded-md"
+        }
       >
         {children}
       </Link>

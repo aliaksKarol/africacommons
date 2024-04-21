@@ -11,6 +11,26 @@ const sortBy = [
   { value: "date_desc", label: "Sort by:Date (newer first)" },
 ];
 
+const NoResults = () => (
+  <>
+    <div className='mt-10'>
+      <div className='flex justify-center mb-1 px-2'>
+        <img
+          src='https://static.coherentcommons.com/img/illustrations/add_to_list.svg'
+          alt='Add to list icon'
+          className='img-fluid px-4 mt-10'
+          style={{ maxWidth: "25%" }}
+        />
+      </div>
+    </div>
+    <div className='flex justify-center mt-4 mb-10'>
+      <p className='px-4'>
+        <small>There is no content available to you in this list</small>
+      </p>
+    </div>
+  </>
+);
+
 export const Filter = () => {
   return (
     <>
@@ -23,21 +43,6 @@ export const Filter = () => {
           <ListViewButton />
           <GridViewButton />
         </div>
-      </div>
-      <div className='mt-10'>
-        <div className='flex justify-center mb-1 px-2'>
-          <img
-            src='https://static.coherentcommons.com/img/illustrations/add_to_list.svg'
-            alt='Add to list icon'
-            className='img-fluid px-4 mt-10'
-            style={{ maxWidth: "25%" }}
-          />
-        </div>
-      </div>
-      <div className='flex justify-center mt-4 mb-10'>
-        <p className='px-4'>
-          <small>There is no content available to you in this list</small>
-        </p>
       </div>
     </>
   );

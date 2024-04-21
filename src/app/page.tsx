@@ -1,5 +1,7 @@
 import Article from "@/components/Article/Article";
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
+import ResultGrid from "@/components/FilterResults/FilterResults";
+import { mockedResults } from "@/components/FilterResults/mocks";
 import { Filter } from "@/components/FilterSection/FilterSection";
 
 export default function Home() {
@@ -19,6 +21,7 @@ export default function Home() {
       />
       <Article />
       <Filter />
+      <ResultGrid results={mockedResults} />
     </main>
   );
 }

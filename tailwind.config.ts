@@ -18,6 +18,7 @@ const config: Config = {
       },
       screens: {
         lg: "992px",
+        "xs-max": { max: "479px" },
         "sm-max": { max: "639px" },
         "md-max": { max: "767px" },
         "lg-max": { max: "991px" },
@@ -25,6 +26,22 @@ const config: Config = {
       },
       spacing: {
         "12": "3rem",
+      },
+      fontFamily: {
+        custom: [
+          "-apple-system",
+          "BlinkMacSystemFont",
+          '"Segoe UI"',
+          "Roboto",
+          '"Helvetica Neue"',
+          "Arial",
+          '"Noto Sans"',
+          "sans-serif",
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
       },
     },
   },
